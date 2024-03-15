@@ -29,10 +29,10 @@ However dont use it
 
 
 
-let variable1=5;
-let variable2=8;
-var variable3='3';
-let variable4="3a";
+let variable1 = 5;
+let variable2 = 8;
+var variable3 = '3';
+let variable4 = "3a";
 
 // We can use Number(variableName) to convert the numerical data which are in string form from string to number  
 //In the above example, variable1 and variable2 are numbers, so dont have to convert it
@@ -43,7 +43,7 @@ console.log(typeof variable3);
 // However, variable3 is a string, and its content consists solely of numeric characters. Therefore, we can convert it to a number using the following line:
 
 
- variable3=Number(variable3);
+variable3 = Number(variable3);
 
 
 //This will now print number
@@ -53,15 +53,15 @@ console.log(typeof variable3);
 //Now if we try to do the same thing to variable4, we will see that the type after conversion is a "number". However the value of variable4 becomes NaN which means Not a Number, however js considers NaN to be a Number 
 //So, instead of value being NaN, the typeof variable4 returns number not because variable4 is a number but due to NaN having the type of number
 
-variable4=Number(variable4);
+variable4 = Number(variable4);
 console.log(typeof variable4);
 
 
 //Same thing happens to pure string values as well
 
-let languageName="JavaScript";
+let languageName = "JavaScript";
 
-languageName=Number(languageName);
+languageName = Number(languageName);
 console.log(typeof languageName);
 
 

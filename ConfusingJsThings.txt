@@ -1,0 +1,13 @@
+NaN stands for not a number but type of NaN is a number
+
+var check= 2==true is false
+BUT
+
+ if(2){
+    console.log("as");
+}
+
+will print as;
+
+
+if
