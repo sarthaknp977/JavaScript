@@ -32,37 +32,43 @@
 // console.log(1==true)
 // console.log(2==true)
 
-if(2){
-    console.log(2);
-}
+// if(2){
+//     console.log(2);
+// }
 
-if(-1){
-    console.log(-1);
+// if(-1){
+//     console.log(-1);
 
-}
+// }
 
-if('abc'){
-    console.log("abc");
-}
-
-
-if(0){
-    console.log(0);
-}
-
-if('0'){
-    console.log(0);
-}
-
-if(Number('0')){
-    console.log(0);
-}
-
-if(null){
-    conosole.log('null');
-}
+// if('abc'){
+//     console.log("abc");
+// }
 
 
-if(undefined){
-    console.log('undefined');
-}
+// if(0){
+//     console.log(0);
+// }
+
+// if('0'){
+//     console.log(0);
+// }
+
+// if(Number('0')){
+//     console.log(0);
+// }
+
+// if(null){
+//     conosole.log('null');
+// }
+
+
+// if(undefined){
+//     console.log('undefined');
+// }
+
+// const myFunction= function () {
+//     console.log("a");
+// }
+
+// console.log(myFunction);
