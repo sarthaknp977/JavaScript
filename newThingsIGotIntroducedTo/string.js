@@ -66,9 +66,3 @@
 // if(undefined){
 //     console.log('undefined');
 // }
-
-// const myFunction= function () {
-//     console.log("a");
-// }
-
-// console.log(myFunction);
