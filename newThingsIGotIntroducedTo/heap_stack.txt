@@ -1,0 +1,7 @@
+stack:
+primtive data
+
+
+heap:
+Refrence or non primitive data
+

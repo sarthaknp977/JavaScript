@@ -10,4 +10,9 @@ BUT
 will print as;
 
 
-if
+
+
+When working with Unicode characters, particularly those from languages with unique character handling rules, certain functions like areEqualInUpperCase and areEqualInLowerCase may not behave as expected. These functions are designed to provide boolean values for checking equality between strings in upper case and lower case, respectively. However, there are cases where they may yield unexpected results due to differences in character mappings.
+
+console.log(areEqualInUpperCase("ß", "ss")); // true; should be false
+console.log(areEqualInLowerCase("ı", "I")); // false; should be true
