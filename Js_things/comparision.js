@@ -1,5 +1,16 @@
 //Only compare values with same data types for expected result
 
+
+// comparision takes place on the basis of given condition The condition can either be true or false 
+
+// The value being either true or false depends on the basic of "truthy" and "falsy"
+
+// here are the elements that can be considerd falsy:
+// 0 null NaN undefined document.all  "" '' false
+// everything except these are considered truthy:
+// "saldhdsi" 1 2 3 4 ... n -1 -2 -3 ...-n      anything 
+
+
 //All of these are true
 
 // console.log(2=='2');
