@@ -6,8 +6,6 @@
 // array[-2] = 'c';
 // console.log(array.indexOf('c'));  
 
-
-
 //foreach in array:
 
 let array = [1, 2, 3, 4, 5];
@@ -19,7 +17,10 @@ let array = [1, 2, 3, 4, 5];
 
 // array.forEach(funct)
 
+// array.forEach(function (val) {
+//     console.log(val)
+// })
 
-array.forEach(function (val) {
-    console.log(val)
-})
+array.forEach(val => {
+    console.log(val);
+});
