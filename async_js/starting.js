@@ -1,3 +1,5 @@
+
+
 // sync task solves the task one at a time or line by line
 
 
@@ -26,4 +28,68 @@
 // so we can coclude that the tasks from main stack have higher priority 
 
 
+// There isn't any order on how the tasks from side stack should be executed
+//ie: No ordered is followed
+// if main stack is empty and the side stack has 4 tasks a b c and d
+
+// a takes 2s b takes 1s c takes 0.3s and d takes 3s
+//if main stack is free/empty then after the completion of task c in side stack, the task doesnt wait for a and b although they are in higher position compared to task c
+
+// so the tasks get executed in this order
+// c-0.3s, b-1s ,a-2s, d-3s
+
+//any code that needs some time is async by default in most of the cases and is sent to side stack
+
+// to write async code we use these things:
+// setTimeout - The code runs after a delay
+// setInterval - The code runs after a delay but repeatedly in a particular interval
+// fetch API - This will fetch API and run the code so the fetching takes time
+// Axios(or other HTTP libraries) - Does everything as fetch API but is more developer friendly
+// Promise - The code inside this will get executed however this promise itself goes into side stack and when the code is resolved internally, this runs
+
+
+// setTimeout : setTimeout(function(){},time in miliseconds)
+
+// eg:
+// setTimeout(function(){
+//     console.log("Time Out");
+// },3000)
+
+// setInterval : setInterval(function(){},time in miliseconds)
+// looks similar to setTimeout, The only difference is that, setTimeout runs for 1 time and setInterval runs infinitely
+
+//eg:
+// setInterval(function(){
+//     console.log("Interval");
+// },2000)
+
+
+
+//This is what we can do to stop the setInterval function after certain time or after certain condition isn fulfilled
+// let count=0;
+
+// const stopInterval = setInterval(function(){
+//     console.log("Interval");
+//     count++;
+//     if(count===2) clearInterval(stopInterval);
+// },200)
+
+
+// as fetch has to bring some data from another website we dont know if it will return immediately or take a lot of time, so this is considered async task by js
+// if fetch was synchronous task then this might lead to the other task not being executed as the top task of the main stack hasn't been complete
+
+// fetch('url');
+
+// fetch('https://catfact.ninja/fact')
+// .then(raw=>raw.json())
+// .then(res=> console.log(res.fact))
+
+// As mentioned above axios is similar to fetch, it more developer friendly in a sense that we dont have to convert the raw data into json file
+// We must include the cdn in order to use axios
+
+// axios.get('url')
+// .then(result=>console.log(result))
+
+axios.get('https://catfact.ninja/fact')
+.then(result=>console.log(result))
 
