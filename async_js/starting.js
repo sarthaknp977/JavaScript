@@ -40,13 +40,15 @@
 
 //any code that needs some time is async by default in most of the cases and is sent to side stack
 
-// to write async code we use these things:
+// we use the following to write async code:
+
 // setTimeout - The code runs after a delay
 // setInterval - The code runs after a delay but repeatedly in a particular interval
 // fetch API - This will fetch API and run the code so the fetching takes time
 // Axios(or other HTTP libraries) - Does everything as fetch API but is more developer friendly
 // Promise - The code inside this will get executed however this promise itself goes into side stack and when the code is resolved internally, this runs
 
+// these are used when we need to do something that needs time
 
 // setTimeout : setTimeout(function(){},time in miliseconds)
 
@@ -90,6 +92,42 @@
 // axios.get('url')
 // .then(result=>console.log(result))
 
-axios.get('https://catfact.ninja/fact')
-.then(result=>console.log(result))
+// axios.get('https://catfact.ninja/fact')
+// .then(result=>console.log(result))
 
+// promises : think of some async code (ie it will go to side stack for now and will run later, this means that the code might or might not return anything depending on some scenerios)
+
+// anytime you write something(async code) inside this promise, the promise will grant you something, that something can have 3 values :
+// Completed, Waiting, Resolved 
+
+// and there are mainly 2 events that can occur after using promise. They are:
+//then and catch
+
+//by default this value is set as waiting,
+//if the promise returns with the value then it changes to resolved 
+//else if the promise doesn't return with with a desired/wrong data, the value changes to rejected
+
+const wait = new Promise(function (resolve, reject) {
+    fetch('https://catfact.ninja/fact')
+        .then(raw => raw.json())
+        .then(result => {
+            if (result.fact.includes("cat")) {
+                resolve();
+            }
+            else {
+                reject();
+            }
+        })
+});
+
+
+wait
+    .then(function () {         // runs only when promise hold resolve
+        console.log("done")
+    })
+
+    .catch(function () {            // runs only when promise hold reject
+        console.log("not done")
+    })
+
+// console.log(wait);//if printed outside this will return pending as this is on the main stack and the wait(promise) is on side stack
