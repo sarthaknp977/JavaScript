@@ -95,6 +95,10 @@
 // axios.get('https://catfact.ninja/fact')
 // .then(result=>console.log(result))
 
+
+
+
+
 // promises : think of some async code (ie it will go to side stack for now and will run later, this means that the code might or might not return anything depending on some scenerios)
 
 // anytime you write something(async code) inside this promise, the promise will grant you something, that something can have 3 values :
