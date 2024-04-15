@@ -303,13 +303,10 @@ console.log(ans.next().value); //undefined
 // console.log(ans2.next().value);
 // console.log(ans2.next().value);
 // console.log(ans2.next().value);
-
 //                              OR
-
 // for (let i = 0; i < 12; i++) {
 //     console.log(ans2.next().value);
 // }
-
 
 // for prime Numbers using generators
 
@@ -333,11 +330,16 @@ console.log(ans.next().value); //undefined
 // }
 
 
-
-
-
-
-
-
-
 //Web Workers
+// sometimes there a huge task to be perfomed, this can sometime cause too much load in the thread, due to this reason we can create another js file, take the data from main file to that newly created file, perform the task there parallely to make it fast and effective just like multi threading
+
+// this feature allows us to run scripts in background threads
+//  example:
+var nums = Array.from({ length: 1000 }, (_, value) => value + 1);
+
+const worker = new Worker('/async_js/worker.js');
+worker.postMessage(nums);
+
+worker.onmessage = function (sum) {
+    console.log(sum.data)
+}
