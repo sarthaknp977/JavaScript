@@ -66,7 +66,6 @@
 // },2000)
 
 
-
 //This is what we can do to stop the setInterval function after certain time or after certain condition isn fulfilled
 // let count=0;
 
