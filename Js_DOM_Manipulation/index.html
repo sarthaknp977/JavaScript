@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            display: block;
+            margin-left: 100px;
+            padding: 20px 50px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            width: 60vw;
+
+        }
+
+        .button_hehe {
+            color: beige;
+            background-color: rgb(40, 40, 39);
+            font-weight: bolder;
+        }
+
+        .circle {
+            background-color: red;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            opacity: 0.2;
+            transition: linear;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Basic DOM Manipulation</h1>
+    <button id="one" onclick="changeBgColor()">Click me to change the bgcolor of the page</button>
+    <button id="two" onclick="changeContentForBtn2()">Click me to change the content inside the button</button>
+    <button id="three" onclick="changeContentForBtn3()">Click me to change the text color of the button</button>
+    <hr>
+    <h1>Event Handling</h1>
+    <button id="four">Click me to get alert</button>
+    <button id="five">Hover over me to change the content inside the button</button>
+
+
+
+    <script src="event_handling.js"></script>
+    <script src="basic.js"></script>
+</body>
+
+</html>

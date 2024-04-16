@@ -1,0 +1,52 @@
+DOM - Document Object Model
+DOM Manipulation
+    The concept of DOM is pretty simple. In very simple words, it's just about using JavaScript to change the content of HTML. 
+    As we know, HTML structures the page, CSS styles the page, and JavaScript provides functionality to that page. Due to this, we can't change anything in HTML directly while using the webpage; it can only be done by writing code beforehand.
+    However, sometimes we don't want the contents to remain the same every time. There can be several reasons behind it, either to add functionality or to add designs. To do this, JavaScript allows a feature called DOM manipulation.
+    Using DOM manipulation, JavaScript can reach into the HTML structure of a webpage and be able to change the originl content/structure of the page
+    So, DoM is something that allows JavaScript to dynamically interact with the HTML and CSS to change the content, structure, and style of a web page while it's running in the browser.
+
+Accessing Elements
+    We cant directly change anthing from JS, if the content that we want to change is not availabe on the JS file itself using somthing; This can either be via selecting its class, id or the tagName itself.
+    Just like we used .(dot), *(asterisk), #(hash),, tagName, and many other selectors in CSS while styling, we can use various built-in functions in JS to select the Elements from HTML file and then modify the content inside js file
+    Some of those functions are:
+                queryselector()-selects only 1 element with the one class,id,tag
+                querySelectorAll()-selects all element with the one class,id,tag
+                getElementById()-selects element based on id
+                getElementsByClassName()-selects element based on class
+                getElementsByTagName()-selects element based on tag name
+                getElementsByName()-
+
+Modifying Elements:
+    innerHTML - This allows to insert any html tag + content inside some variable/elements of HTML using js
+    textContent - This allows us to change text content as the name suggest
+
+Manipulating Styles and Classes
+    style
+    classList-Used to either add or remove class from html elements 
+    using .classList.add("classNameAlongWithQuotationMark") will add a class called classNameAlongWithQuotationMark
+    using .class.remove("classNameToBeRemoved") will remove the class called classNameToBeRemoved from that tag
+
+
+Creating and Deleting Elements
+    createElement()- This allows creating of any element in js. This will only create element in js and this wont be on HTML/webpage directly. This way we can create any element, make changes on them directly on HTML from js
+    appendChild() - adds the class created from createElement into any specific place
+    removeChild() - removes any child that is in html which was previously created using js
+
+Event Handling:
+    addEventListner() - When we perform any action in js, an Event is  raised. 
+    If there is not any event listner then the event will be ignored
+    If we create any event listner then during that event the listner will run 
+    Some Event Listners are:
+            click
+            mouseover
+            mouseout/mouseleave
+            keydown
+            keyup
+            change
+            submit
+            load
+            DOMContentLoaded
+            resize
+
+Event Object
