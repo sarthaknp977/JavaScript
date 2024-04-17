@@ -1,0 +1,50 @@
+<!-- Create a tabbed interface where clicking on tabs displays different content sections without page reload. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabs {
+
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tab {
+            border: 2px solid black;
+            height: fit-content;
+            padding: 10px;
+            width: fit-content;
+            cursor: pointer;
+
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .content1,
+        .content2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <div class="tab1">ONE</div>
+        <div class="tab2">TWO</div>
+    </div>
+    <div class="content">
+        <div class="content1">ONE</div>
+        <div class="content2">TWO</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

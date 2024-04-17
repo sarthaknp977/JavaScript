@@ -1,0 +1,49 @@
+<!-- Display a progress bar that updates in real-time, showing the progress of a task, download, or form submission. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress {
+            height: 12px;
+            width: 0px;
+            background-color: green;
+            transition: ease-in-out;
+            transition-duration: 12s;
+
+        }
+
+        .progress-bar {
+            height: 12px;
+            width: 120px;
+            border: 2px solid;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        button {
+            margin-top: 30px;
+            border: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <button>Download</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
