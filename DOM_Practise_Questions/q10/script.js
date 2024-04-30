@@ -3,9 +3,9 @@
 let scrollBar = document.querySelector('.scroll-progress');
 
 window.addEventListener('scroll', function () {
-    let scrollTop = document.documentElement.scrollTop;
-    let scrollHeight = document.documentElement.scrollHeight;
-    let scrolledPercentage = scrollTop / (scrollHeight - window.innerHeight) * 100 + '%';
+    let scrolledArea = document.documentElement.scrollTop;
+    let totalScrollableHeight = document.documentElement.scrollHeight;
+    let displayHeight = window.innerHeight;
+    let scrolledPercentage = scrolledArea / (totalScrollableHeight - displayHeight) * 100 + '%';
     scrollBar.style.width = scrolledPercentage;
-
 })
